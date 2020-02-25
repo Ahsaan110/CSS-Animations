@@ -1,0 +1,136 @@
+body{
+	width: 100%;
+	margin: 0;
+}
+
+h1{
+	font-size: 10em;
+	color: #fff;
+	position: fixed;
+	width: 100%;
+	text-shadow: 1px 1px 10px rgba(0,0,0,0.7);
+	top:0.6em;
+	margin: 0;
+    background-image: url(https://www.wallpaperflare.com/static/918/321/127/clouds-mountains-sky-snow-wallpaper.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 1;
+}
+.mountain-parallax:before{
+	content:"";
+	background:url("images/rain.png");
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	animation: rain 6s linear infinite;
+}
+@keyframes rain{
+	from
+	{ 
+		background-position: 0 0;
+	}
+	to
+	{
+		background-position: 100% 0%;
+	}
+}
+.mask-mountain:after{
+    content: "";
+    background: url(images/clouds.png)no-repeat;
+    width: 1706px;
+    height: 288px;
+    right: 0;
+    position: absolute;
+    animation: cloud 30s linear infinite;
+    background-size: 90%;
+}
+@keyframes cloud{
+	0%{
+		background-position:0;
+	}
+	70%{
+		background-position: 100%;
+	}
+	100%{
+		background-position: 0;
+	}
+}
+.cloud{
+	left: 0!important;
+    top: 0!important;
+    width: 100%!important;
+    z-index: -0!important;
+}
+
+.mountain-parallax{
+	width: 100%;
+	height: 121vh;
+	background:url("images/mountain.jpg") no-repeat;
+	background-size: 100%;
+	position: relative;
+}
+.mask-mountain{
+	mask:url("images/mask-mountain.svg");
+	mask-size:cover;
+	-webkit-mask:url("images/mask-mountain");
+	-webkit-mask-size:100%;
+	width: 100%;
+	height: 100%;
+}
+.city-parallax{
+	width: 100%;
+	height: 109vh;
+	background:url("images/city.jpg") no-repeat;
+	background-size: 100%;
+	position: relative;
+}
+.mask-city{
+	mask:url("images/masking-city.png");
+	mask-size:cover;
+	-webkit-mask:url("images/masking-city.png");
+	-webkit-mask-size:100%;
+	width: 100%;
+	height: 100%;
+}
+.mask-city h1{
+	top: 2em
+}
+.content-div{
+	width: 100%;
+	height: 100vh;
+	background: #ececec;
+}
+
+.relax-image{
+	position: absolute;
+	width:12%;
+	z-index: 9
+}
+.mountain-parallax .relax-image{
+	left: 16em;
+    bottom: 0;
+    opacity: 0.9;	
+}
+.mountain-parallax .baloon{
+    position: absolute;
+    background: url(images/baloon2.png)no-repeat;
+    width: 23em;
+    height: 29em;
+    right: 15em;
+    bottom: 0em;
+}
+.city-parallax .relax-image{
+    right: 22em;
+    bottom: 0;
+}
+
+.city-parallax .baloon{
+    position: absolute;
+    background: url(images/baloon.png)no-repeat;
+    width: 23em;
+    height: 29em;
+    right: 55em;
+    bottom: 0em;
+    opacity: 0.8
+}
